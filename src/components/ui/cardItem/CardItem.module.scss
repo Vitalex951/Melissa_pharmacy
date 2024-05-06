@@ -1,0 +1,18 @@
+import Link from "next/link";
+import styles from './Links.module.scss'
+import {classNames} from "@/shared/classNames/classNames";
+import {Routes} from "@/constants/routes";
+
+interface LinksProps {
+    className?: string
+}
+
+export const CardItem = (props: LinksProps) => {
+    const {className} = props
+
+    return (
+      <div className={classNames('', {}, [className])}>
+
+      </div>
+    );
+};

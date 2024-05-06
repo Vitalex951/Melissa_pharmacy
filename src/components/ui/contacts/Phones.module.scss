@@ -1,0 +1,18 @@
+
+.phones {
+    color: #fff;
+    & li a {
+        display: flex;
+        gap: 5px;
+        cursor: pointer;
+        color: #fff;
+    }
+    & li a:hover {
+        color: #fff;
+    }
+    & li:first-child {
+        margin-bottom: 5px;
+    }
+
+}
+

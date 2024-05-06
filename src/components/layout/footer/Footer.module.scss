@@ -1,0 +1,48 @@
+.header {
+    width: 100%;
+
+    a {
+        color: #FFF;
+        transition: color 0.4s ease-in-out;
+    }
+
+    & a:hover, & .active {
+        color: #c353c3
+    }
+}
+
+.linksWraper {
+    display: flex;
+    gap: 6px;
+}
+
+.miniHeader {
+    background-color: #4e901a;
+    width: 100%;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainHeader {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.sloganWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 105px;
+    width: 100%;
+
+    .slogan {
+        font-family: "Montserrat", sans-serif;
+        font-size: 32px;
+        font-weight: 500;
+        color: #4e901a;
+        text-align: center;
+    }
+}

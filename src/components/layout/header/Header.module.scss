@@ -1,0 +1,19 @@
+.header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    justify-content: center;
+    f
+    > a {
+        color: #FFF;
+        margin: 0 10px;
+        transition: color 0.4s ease-in-out;
+    }
+    & a:hover, & .active {
+        color: #c353c3
+    }
+
+}
+
+

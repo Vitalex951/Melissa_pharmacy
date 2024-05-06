@@ -1,48 +1,74 @@
-.header {
-    width: 100%;
-
-    a {
-        color: #FFF;
-        transition: color 0.4s ease-in-out;
-    }
-
-    & a:hover, & .active {
-        color: #c353c3
-    }
+.container {
+    background-color: #f9f9f9;
+    padding: 80px 15px 40px 15px;
 }
 
-.linksWraper {
-    display: flex;
-    gap: 6px;
-}
-
-.miniHeader {
-    background-color: #4e901a;
-    width: 100%;
-    padding: 10px 15px;
+.wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-.mainHeader {
-    padding: 10px 15px;
+.links {
     display: flex;
-    align-items: center;
-    width: 100%;
-}
+    flex-direction: column;
+    gap: 20px;
 
-.sloganWrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 105px;
-    width: 100%;
-
-    .slogan {
-        font-family: "Montserrat", sans-serif;
-        font-size: 32px;
-        font-weight: 500;
-        color: #4e901a;
-        text-align: center;
+    & a {
+        color: #111111;
     }
 }
+
+.logoWrapper {
+    padding-left: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    .text {
+        font-size: 14px;
+        color: #4e901a;
+    }
+}
+
+.contactsWrapper {
+    max-width: 280px;
+}
+
+.address {
+    font-size: 12px;
+    text-align: right;
+    color: #434343;
+    line-height: 1.6;
+}
+
+@media screen and (max-width: 860px) {
+    .logoWrapper {
+        display: none;
+    }
+    .contactsWrapper {
+        max-width: none;
+        width: 100%;
+        .address {
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .container {
+        padding-top: 40px;
+    }
+    .wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .links {
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+    }
+}
+

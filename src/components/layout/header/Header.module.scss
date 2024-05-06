@@ -1,19 +1,51 @@
 .header {
+    width: 100%;
+    box-shadow: 1px 1px 10px rgba(0,0,0,0.15);
+}
+
+
+.miniHeader {
+    background-color: #4e901a;
+    width: 100%;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.mainHeader {
+    padding: 10px 15px;
     display: flex;
     align-items: center;
     width: 100%;
-    padding: 10px;
-    justify-content: center;
-    f
-    > a {
-        color: #FFF;
-        margin: 0 10px;
-        transition: color 0.4s ease-in-out;
-    }
-    & a:hover, & .active {
-        color: #c353c3
-    }
+}
 
+.sloganWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 105px;
+    width: 100%;
+
+    .slogan {
+        font-family: "Montserrat", sans-serif;
+        font-size: 32px;
+        font-weight: 500;
+        color: #4e901a;
+        text-align: center;
+    }
+}
+
+.linksWrapper {
+    display: flex;
+    gap: 6px;
+}
+
+@media screen and (max-width: 580px) {
+    .linksWrapper {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
 }
 
 

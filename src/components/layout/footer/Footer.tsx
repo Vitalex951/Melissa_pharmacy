@@ -1,48 +1,32 @@
-'use client'
-
-import styles from './Header.module.scss'
-import {useParams} from "next/navigation";
-import {Montserrat} from "next/font/google";
-import {classNames} from "@/shared/classNames/classNames";
-import {Phones} from "@/components/layout/header/contacts/Phones";
+import styles from './Footer.module.scss'
+import {Links} from "@/components/ui/links/Links";
 import Image from "next/image";
-import logo from '@/assets/images/logo.jpg'
-import Link from "next/link";
+import logo from "@/assets/images/logo.jpg";
 
-const montserrat = Montserrat({
-    weight: ['500'],
-    subsets: ['latin-ext', 'latin']
-})
-
-
-export const Header = () => {
-    const params = useParams()
-
+export const Footer = () => {
     return (
-      <header className={classNames(styles.header, {}, [montserrat.className])}>
-          <div className={styles.miniHeader}>
-              <Phones/>
-              <div className={styles.linksWraper}>
-                  <Link href={'/'}>
-                      О нас
-                  </Link>
-                  <Link href={'/'}>
-                      Контакты
-                  </Link>
-                  <Link href={'/'}>
-                     Адрес
-                  </Link>
-
+      <footer className={styles.container}>
+          <div className={styles.wrapper}>
+              <Links className={styles.links}/>
+              <div className={styles.logoWrapper}>
+                  <Image src={logo} alt={'logo'} width={100} height={100}/>
+                  <div className={styles.text}>
+                      Счастье - быть здоровым.
+                  </div>
+              </div>
+              <div className={styles.contactsWrapper}>
+                  <div className={styles.address}>
+                      ООО «Здоровое решение», юр. адрес: 220006,<br/>
+                      Бобруйск, Ул. Пролетарская, д. 17<br/>
+                      Режим работы: 8.00 - 20.00<br/>
+                      <br/>
+                      В торговом реестре с 13.04.2020 № 479296<br/>
+                      Регистрация № 22 от 12.01.2006 г., Мингорисполком. <br/>
+                      Свидетельство (ЕГР) № 190682403 <br/>
+                      Лицензия на фармацевтическую деятельность Ф-788 от 29.06.2007 г.
+                  </div>
               </div>
           </div>
-          <div className={styles.mainHeader}>
-              <Image src={logo} alt={'logo'} width={100} height={100}/>
-              <div className={styles.sloganWrapper}>
-                  <span className={styles.slogan}>Счастье - быть здоровым. </span>
-              </div>
-
-          </div>
-
-      </header>
+      </footer>
     );
 };

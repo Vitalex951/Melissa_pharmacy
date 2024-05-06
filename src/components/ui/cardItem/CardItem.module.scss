@@ -1,18 +1,37 @@
-import Link from "next/link";
-import styles from './Links.module.scss'
-import {classNames} from "@/shared/classNames/classNames";
-import {Routes} from "@/constants/routes";
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: calc(50% - 10px);
+    box-shadow: 0 2px 9px rgba(0, 0, 0, 0.3);
+    transition: .5s;
 
-interface LinksProps {
-    className?: string
+    img {
+        object-fit: cover;
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+    }
 }
 
-export const CardItem = (props: LinksProps) => {
-    const {className} = props
+@media screen and (min-width: 850px) {
+    .wrapper {
+        width: calc(24% - 10px);
+    }
+}
 
-    return (
-      <div className={classNames('', {}, [className])}>
-
-      </div>
-    );
-};
+.productTitle {
+    font-size: 1.2em;
+    color: #111111;
+    padding: 10px 10px 20px;
+    p {
+        line-height: 1.3;
+        text-align: center;
+        word-wrap: break-word;
+    }
+}

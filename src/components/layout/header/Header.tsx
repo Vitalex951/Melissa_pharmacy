@@ -1,19 +1,39 @@
-import Link from "next/link";
+'use client'
+
 import styles from './Header.module.scss'
-import {useRouter} from "next/router";
+import {useParams} from "next/navigation";
+import {Montserrat} from "next/font/google";
+import {classNames} from "@/shared/classNames/classNames";
+import {Phones} from "@/components/ui/contacts/Phones";
+import Image from "next/image";
+import logo from '@/assets/images/logo.jpg'
+import {Links} from "@/components/ui/links/Links";
+import Link from "next/link";
+
+const montserrat = Montserrat({
+    weight: ['500'],
+    subsets: ['latin-ext', 'latin']
+})
+
 
 export const Header = () => {
-    const {pathname} = useRouter()
+    const params = useParams()
 
-    console.log(pathname)
     return (
-      <div className={styles.header}>
-          <Link className={pathname === '/' ? styles.active: ''} href={'/'}>
-              Home
-          </Link>
-          <Link  className={pathname === '/about' ? styles.active: ''} href={'/about'}>
-              About
-          </Link>
-      </div>
+      <header className={classNames(styles.header, {}, [montserrat.className])}>
+          <div className={styles.miniHeader}>
+              <Phones/>
+              <Links className={styles.linksWrapper}/>
+          </div>
+          <div className={styles.mainHeader}>
+              <Link href={'/'}>
+                  <Image src={logo} alt={'logo'} width={100} height={100}/>
+              </Link>
+              <div className={styles.sloganWrapper}>
+                  <h1 className={styles.slogan}>Счастье - быть здоровым. </h1>
+              </div>
+          </div>
+
+      </header>
     );
 };

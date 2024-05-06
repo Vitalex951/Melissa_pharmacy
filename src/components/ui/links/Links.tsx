@@ -1,32 +1,25 @@
 import Link from "next/link";
-import styles from './Phones.module.scss'
-import {useParams} from "next/navigation";
-import {PhoneFilled} from "@ant-design/icons";
-import {Contacts} from "@/constants/contacts";
+import {classNames} from "@/shared/classNames/classNames";
+import {Routes} from "@/constants/routes";
 
+interface LinksProps {
+    className?: string
+}
 
-export const Phones = () => {
-    const params = useParams()
+export const Links = (props: LinksProps) => {
+const {className} = props
 
     return (
-      <ul className={styles.phones}>
-          <li>
-              <Link href={`tel:${Contacts.Phone1}`}>
-                  <PhoneFilled style={{color: "white"}}/>
-                  <span>{Contacts.Phone1}</span>
-              </Link>
-          </li>
-          <li>
-              <Link href={`tel:${Contacts.Phone2}`}>
-                  <PhoneFilled style={{color: "white"}}/>
-                  <span>{Contacts.Phone2}</span>
-              </Link>
-          </li>
-      </ul>
+      <div className={classNames('', {}, [className])}>
+          <Link href={Routes.About}>
+              О нас
+          </Link>
+          <Link href={Routes.Contacts}>
+              Контакты
+          </Link>
+          <Link href={Routes.Address}>
+              Адрес
+          </Link>
+      </div>
     );
 };
-
-
-// <Link href={'/about'}>
-//               About
-//           </Link>

@@ -22,9 +22,6 @@ const pathName = usePathname()
           <Link href={Routes.Contacts} className={Routes.Contacts === pathName ? 'active' : ''}>
               Контакты
           </Link>
-          <Link href={Routes.Address} className={Routes.Address === pathName ? 'active' : ''}>
-              Адрес
-          </Link>
       </div>
     );
 };

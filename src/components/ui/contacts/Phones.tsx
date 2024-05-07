@@ -2,7 +2,7 @@ import Link from "next/link";
 import styles from './Phones.module.scss'
 import {useParams} from "next/navigation";
 import {PhoneFilled} from "@ant-design/icons";
-import {Contacts} from "@/constants/contacts";
+import {ContactsEnum} from "@/constants/contactsEnum";
 
 
 export const Phones = () => {
@@ -11,15 +11,15 @@ export const Phones = () => {
     return (
       <ul className={styles.phones}>
           <li>
-              <Link href={`tel:${Contacts.Phone1}`}>
+              <Link href={`tel:${ContactsEnum.Phone1}`}>
                   <PhoneFilled style={{color: "white"}}/>
-                  <span>{Contacts.Phone1}</span>
+                  <span>{ContactsEnum.Phone1}</span>
               </Link>
           </li>
           <li>
-              <Link href={`tel:${Contacts.Phone2}`}>
+              <Link href={`tel:${ContactsEnum.Phone2}`}>
                   <PhoneFilled style={{color: "white"}}/>
-                  <span>{Contacts.Phone2}</span>
+                  <span>{ContactsEnum.Phone2}</span>
               </Link>
           </li>
       </ul>

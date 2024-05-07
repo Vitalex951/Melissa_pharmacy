@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+}
+
+.wrapper {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.mapsWrapper {
+    width: 100%;
+    overflow: scroll;
+    max-height: 600px;
+    scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 850px) {
+    .wrapper {
+        flex-wrap: wrap;
+    }
+}

@@ -17,8 +17,6 @@ const montserrat = Montserrat({
 
 
 export const Header = () => {
-    const params = useParams()
-
     return (
       <header className={classNames(styles.header, {}, [montserrat.className])}>
           <div className={styles.miniHeader}>

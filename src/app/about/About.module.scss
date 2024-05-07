@@ -1,0 +1,52 @@
+.container {
+    display: flex;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.wrapper {
+    flex: 0.5;
+}
+
+.textWrapper {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+     p {
+         font-family: "Rubik", sans-serif;
+         line-height: 1.6;
+         font-size: 16px;
+     }
+}
+
+.advantagesWrapper {
+    flex: 0.5;
+    text-align: center;
+}
+
+.infoWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.infoContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+@media screen and (max-width: 570px) {
+    .wrapper {
+        flex: 1;
+    }
+    .container {
+        flex-wrap: wrap;
+    }
+    .infoWrapper {
+        flex-direction: row;
+    }
+    .advantagesWrapper {
+        width: 100%;
+    }
+}

@@ -62,9 +62,12 @@ a {
 }
 
 a:hover {
-    color: #c353c3!important;
+    color: #9b059b!important;
 }
 
+.active {
+    color: #9b059b
+}
 
 ul li {
     list-style: none;

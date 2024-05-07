@@ -8,7 +8,7 @@ export default function Home() {
     return (
       <Layout title={'Аптека'}>
           <div className={styles.main}>
-           <Heading text={'Новинки'}/>
+           <Heading text={'Популярное'}/>
               <div className={styles.productWrapper}>
                   {productsMock.map(el => <CardItem key={el.id} card={el}/>)}
               </div>
